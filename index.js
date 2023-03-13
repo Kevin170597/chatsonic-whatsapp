@@ -7,7 +7,7 @@ app.use(express.json());
 
 const webhookRouter = require('./src/routes/webhook');
 
-app.use('/', (req, res) => res.send('chatsonic'));
 app.use('/webhook', webhookRouter);
+app.use('/', (req, res) => res.send('chatsonic'));
 
 app.listen(PORT, () => console.log(`Server running in port ${PORT}`));
